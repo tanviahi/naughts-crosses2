@@ -1,8 +1,9 @@
 @import "utilis";
+
 // resets
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -85,7 +86,7 @@ main {
 }
 
 .btn-reset {
-    cursor:pointer;
+    cursor: pointer;
     padding: .5rem 3rem;
     border-radius: 1rem;
     border: 1px solid #333;
@@ -94,17 +95,20 @@ main {
 }
 
 @media screen and (max-width: 450px) {
-    .heading{
+    .heading {
         font-size: 1rem;
         letter-spacing: 0;
     }
-    .heading::after{
+
+    .heading::after {
         right: -1rem;
     }
-    .game-grid{
+
+    .game-grid {
         width: 15rem;
     }
-    .box{
+
+    .box {
         font-size: 2rem;
     }
 
