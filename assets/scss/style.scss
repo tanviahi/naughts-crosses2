@@ -4,113 +4,116 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Teachers", sans-serif;
+  font-family: "Teachers", sans-serif;
+  user-select: none;
 }
 
 button,
 input {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 main {
-    min-height: 100vh;
-    min-width: 100vw;
-    background: radial-gradient(circle at 11.4% 50%, rgba(255, 37, 175, 0.685) 0%, rgb(250, 237, 56) 90%);
-    display: grid;
-    place-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: radial-gradient(
+    circle at 11.4% 50%,
+    rgba(255, 37, 175, 0.685) 0%,
+    rgb(250, 237, 56) 90%
+  );
+  display: grid;
+  place-items: center;
 }
 
 .heading {
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 1px;
-    position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  position: relative;
 }
 
 .heading::before {
-    content: "o";
-    color: red;
-    position: absolute;
-    left: -2rem;
-    font-weight: 500;
+  content: "o";
+  color: red;
+  position: absolute;
+  left: -2rem;
+  font-weight: 500;
 }
 
 .heading::after {
-    content: "x";
-    color: red;
-    position: absolute;
-    right: -2rem;
-    font-weight: 500;
+  content: "x";
+  color: red;
+  position: absolute;
+  right: -2rem;
+  font-weight: 500;
 }
 
 .player-status {
-    border: 1px solid #333;
-    background: #eee;
-    border-radius: 1rem;
-    padding: 0.5rem 3rem;
+  border: 1px solid #333;
+  background: #eee;
+  border-radius: 1rem;
+  padding: 0.5rem 3rem;
 }
 
 .current-player {
-    color: red;
-    font-weight: 500;
+  color: red;
+  font-weight: 500;
 }
 
 // game grid
 .game-grid {
-    background-color: whitesmoke;
-    width: 20rem;
-    aspect-ratio: 1/1;
+  background-color: whitesmoke;
+  width: 20rem;
+  aspect-ratio: 1/1;
 
-
-    border-radius: 1rem;
-    background: #e0e0e0;
-    box-shadow: 20px 20px 60px #bebebec4,
-        -20px -20px 60px #ffffff;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    padding: 2rem;
+  border-radius: 1rem;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebec4, -20px -20px 60px #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 2rem;
 }
 
 .box {
-    font-size: 3rem;
-    color: #333;
-    border: 1px solid #333;
-    display: grid;
-    place-items: center;
+  font-size: 3rem;
+  color: #333;
+  border: 1px solid #333;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
 
 .btn-reset {
-    cursor: pointer;
-    padding: .5rem 3rem;
-    border-radius: 1rem;
-    border: 1px solid #333;
-    background: whitesmoke;
-    visibility: hidden;
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  border-radius: 1rem;
+  border: 1px solid #333;
+  background: whitesmoke;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 450px) {
-    .heading {
-        font-size: 1rem;
-        letter-spacing: 0;
-    }
+  .heading {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
 
-    .heading::after {
-        right: -1rem;
-    }
+  .heading::after {
+    right: -1rem;
+  }
 
-    .game-grid {
-        width: 15rem;
-    }
+  .game-grid {
+    width: 15rem;
+  }
 
-    .box {
-        font-size: 2rem;
-    }
-
+  .box {
+    font-size: 2rem;
+  }
 }
